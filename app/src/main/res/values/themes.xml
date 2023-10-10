@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Presentation" parent="SystemStyle">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorPrimaryVariant">@color/primary_mid</item>
+        <item name="colorOnPrimary">@color/primary_dark</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/indigo_600</item>
+        <item name="colorSecondaryVariant">@color/indigo_800</item>
+        <item name="colorOnSecondary">@color/primary_light</item>
+        <item name="colorAccent">@color/red_500</item>
+        <item name="colorOnBackground">@color/white</item>
+
+        <item name="colorControlNormal">@color/indigo_600</item>
+        <item name="colorControlHighlight">@color/indigo_600</item>
+        <item name="colorControlActivated">@color/indigo_600</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="songsBackground">@color/white</item>
+    </style>
+</resources>

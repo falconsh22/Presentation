@@ -1,0 +1,203 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SystemStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+
+        <!--item selectable background effect-->
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+
+        <item  name="android:windowActivityTransitions">true</item>
+
+        <!--system bars config-->
+        <item name="android:statusBarColor" tools:targetApi="m">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">?attr/colorPrimary</item>
+
+        <!--text views-->
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+
+        <!--card views-->
+        <item name="cardViewStyle">@style/CardViewStyle</item>
+        <item name="materialCardViewStyle">@style/CardViewStyle</item>
+
+        <!--scroll view style-->
+        <item name="android:scrollViewStyle">@style/ScrollViewStyle_Vertical</item>
+        <item name="android:horizontalScrollViewStyle">@style/ScrollViewStyle_Horizontal</item>
+        <item name="recyclerViewStyle">@style/RecyclerViewStyle</item>
+
+        <!--bottom navigation view-->
+        <item name="bottomNavigationStyle">@style/BottomNavigationViewStyle</item>
+
+        <!--material button style-->
+        <item name="materialButtonStyle">@style/MaterialButtonLargeStyle</item>
+
+        <!--chip view style-->
+        <item name="chipStyle">@style/ChipStyle</item>
+
+        <!--chip view style-->
+        <item name="radioButtonStyle">@style/RadioButtonStyle</item>
+
+        <!--ProgressBar style-->
+        <item name="android:progressBarStyle">@style/ProgressBarStyle</item>
+        <item name="progressBarStyle">@style/ProgressBarStyle</item>
+        <item name="linearProgressIndicatorStyle">@style/LinearProgressbarStyle</item>
+
+        <!--toolbar-->
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+
+        <!--search view-->
+        <item name="searchViewStyle">@style/SearchViewStyle</item>
+    </style>
+
+    <!--region Card View-->
+    <style name="CardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/colorPrimary</item>
+        <item name="cardCornerRadius">@dimen/generic_size_major_radius</item>
+        <item name="strokeColor">?colorOnPrimary</item>
+        <item name="strokeWidth">@dimen/generic_size_2dp</item>
+        <item name="android:foreground">@drawable/ripple_major</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Image View-->
+    <style name="RoundedImageViewStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="background">@color/transparentFull</item>
+        <item name="cornerSize">@dimen/generic_size_major_radius</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="CircleImageViewStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="background">@color/transparentFull</item>
+        <item name="cornerSize">50%</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Scroll View Style-->
+    <style name="ScrollViewStyle_Vertical">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb_vertical</item>
+        <item name="android:fadingEdgeLength">@dimen/generic_size_16dp</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Scroll View Style-->
+    <style name="ScrollViewStyle_Horizontal">
+        <item name="android:scrollbars">horizontal</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb_horizontal</item>
+        <item name="android:fadingEdgeLength">@dimen/generic_size_16dp</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Scroll View Style-->
+    <style name="RecyclerViewStyle">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb_vertical</item>
+        <item name="android:fadingEdgeLength">@dimen/generic_size_16dp</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="itemSpacing">@dimen/generic_size_16dp</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Bottom Navigation View Style-->
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconSize">@dimen/generic_size_48dp</item>
+        <item name="itemIconTint">@color/nav_selector</item>
+        <item name="itemRippleColor">@color/white</item>
+        <item name="itemTextColor">@color/nav_selector</item>
+        <item name="itemTextAppearance">@style/ItemTextStyle</item>
+        <item name="labelVisibilityMode">selected</item>
+        <item name="android:background">@drawable/background_bottom_navigation_view</item>
+    </style>
+
+    <style name="ItemTextStyle">
+        <item name="android:textSize">@dimen/generic_text_size_12sp</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Material Button Style-->
+    <style name="MaterialButtonLargeStyle" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/gray_500</item>
+        <item name="android:minHeight">@dimen/generic_size_60dp</item>
+        <item name="shapeAppearanceOverlay">@style/MaterialButtonShape</item>
+        <item name="backgroundTint">@color/button_selector</item>
+        <item name="android:textColor">@color/button_top_selector</item>
+    </style>
+
+    <style name="MaterialButtonShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="MaterialButtonRectStyle" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/gray_500</item>
+        <item name="android:minHeight">@dimen/generic_size_60dp</item>
+        <item name="shapeAppearanceOverlay">@style/MaterialButtonRectShape</item>
+        <item name="backgroundTint">@color/button_selector</item>
+        <item name="android:textColor">@color/button_top_selector</item>
+    </style>
+
+    <style name="MaterialButtonRectShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/generic_size_minor_radius</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Chip Style-->
+    <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipBackgroundColor">@color/chip_selector</item>
+        <item name="android:checkable">true</item>
+        <item name="android:textColor">@color/chip_top_selector</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="closeIcon">@drawable/ic_close_circle_filled</item>
+        <item name="closeIconTint">@color/chip_top_selector</item>
+        <item name="checkedIcon">@drawable/ic_check_circle_filled</item>
+        <item name="checkedIconTint">@color/chip_top_selector</item>
+        <item name="android:animateLayoutChanges">true</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Radio Button Style-->
+    <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:buttonTint" tools:targetApi="lollipop">@color/radio_selector</item>
+    </style>
+    <!--endregion-->
+
+    <!--region ProgressBar Style-->
+    <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint" tools:targetApi="lollipop">?attr/colorSecondary</item>
+        <item name="android:indeterminateTint" tools:targetApi="lollipop">?attr/colorSecondary</item>
+    </style>
+    <style name="LinearProgressbarStyle" parent="Widget.MaterialComponents.LinearProgressIndicator">
+        <item name="indicatorColor">?attr/colorSecondary</item>
+        <item name="trackColor">@color/white</item>
+        <item name="trackCornerRadius">@dimen/generic_size_3dp</item>
+        <item name="trackThickness">@dimen/generic_size_6dp</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Toolbar Style-->
+    <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetRight">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Search View Style-->
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchHintIcon">@null</item>
+        <item name="searchIcon">@drawable/ic_search</item>
+        <item name="closeIcon">@drawable/ic_close</item>
+        <item name="queryBackground">@null</item>
+        <item name="android:background">@drawable/background_searchview</item>
+    </style>
+    <!--endregion-->
+</resources>
